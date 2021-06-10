@@ -2217,8 +2217,8 @@ body img {
   position: absolute;
   top: 0;
   left: 0;
+  padding: 40px 45px 40px 24px;
   margin: 0;
-  padding: 51px 45px 51px 24px;
   text-align: left;
   border: none;
   font-size: 18px;
@@ -2240,5 +2240,11 @@ body img {
 .project-section__element:hover .project-section__description {
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+
+@media screen and (min-width: 1200px) {
+  .project-section__description {
+    padding: 51px 45px 51px 24px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -73,8 +73,8 @@
         top: 0;
         left: 0;
 
+        padding: 40px 45px 40px 24px;
         margin: 0;
-        padding: 51px 45px 51px 24px;
   
         text-align: left;
         border: none;
@@ -90,6 +90,10 @@
 
         .project-section__element:hover & {
             transform: translateY(0);
+        }
+
+        @media screen and (min-width: $desktop) {
+            padding: 51px 45px 51px 24px;
         }
     }
 

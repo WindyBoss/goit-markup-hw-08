@@ -1,0 +1,63 @@
+.checkbox {
+    @include centeredFlex(flex, center);
+
+    &__label {
+        display: inline-block;
+        text-align: left;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 1.2;
+        color: getColor("primary-text");
+
+        @media screen and (min-width: $desktop) {
+            font-size: 14px;
+            line-height: 1.71;
+        }
+    }
+  
+    &__link {
+        color: getColor("accent-text");
+        text-decoration: underline;
+    }
+  
+    &__icon {
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    margin-right: 8px;
+    border-radius: 2px;
+    border: 1px solid getColor("second-title-text");
+    background-color: getColor("object-bg");
+    fill: getColor("object-bg");
+  
+    @include transform(background-color);
+
+    @media screen and (min-width: $mobile) {
+        width: 16px;
+        height: 15px;
+    }
+
+    @media screen and (max-width: 340px) {
+        width: 24px;
+        height: 15px;
+    }
+
+    .checkbox__visually-hidden:checked + & {
+        border: 1px solid getColor("accent-button");
+        background-color: getColor("accent-button");
+        fill: getColor("object-bg");
+        width: 30px;
+        height: 20px;
+
+        @media screen and (min-width: $mobile) {
+            width: 16px;
+            height: 15px;
+        }
+
+        @media screen and (max-width: 340px) {
+            width: 24px;
+            height: 15px;
+        }
+    }
+  } 
+}

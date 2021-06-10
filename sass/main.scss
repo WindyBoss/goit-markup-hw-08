@@ -1,0 +1,50 @@
+/* Base and Utilities */
+@import "./utilities/breaking-points";
+@import "./base/visually-hidden";
+@import "./base/normalize";
+@import "./utilities/variables";
+@import "./utilities/colors";
+@import "./base/tags-style";
+@import "./utilities/mixins";
+@import "./utilities/placeholders";
+
+/* Page-Header */
+@import "./components/page-header/page-header";
+@import "./components/common/logo";
+@import "./components/page-header/menu-button";
+@import "./components/page-header/menu";
+@import "./components/page-header/site-nav__pages";
+@import "./components/page-header/contacts";
+@import "./components/page-header/social-media-mobile";
+
+/* Page-Hero */
+@import "./pages/page-index/page-hero";
+
+/* Modal Window */
+@import "./components/forms/backdrop";
+@import "./components/forms/form";
+@import "./components/forms/checkbox";
+
+/* Feature Section */
+@import "./pages/page-index/feature";
+
+/* Work Section */
+@import "./pages/page-index/works";
+
+/* Team Section */
+@import "./pages/page-index/members";
+@import "./components/common/social-media";
+
+
+/* Customer-Section */ 
+@import "./pages/page-index/customers"; 
+
+/* Footer */ 
+@import "./components/page-footer/page-footer";
+
+/* Page-Portfolio */
+/* Filters */
+@import "./pages/page-portfolio/portfolio-filters";
+
+/* Project Section */
+@import "./pages/page-portfolio/projects";

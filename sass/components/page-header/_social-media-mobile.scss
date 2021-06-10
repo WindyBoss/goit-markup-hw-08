@@ -1,0 +1,50 @@
+
+.page-header__social-media {
+    position: absolute;
+    left: 40px;
+    bottom: 48px;
+    display: flex;
+
+    @media screen and (max-width: 420px) {
+        flex-wrap: wrap;
+    }
+
+    @media screen and (min-width: $mobile) {
+        display: none;
+    }
+}
+
+.social-media__name {
+    position: relative;
+    font-weight: 500;
+    font-size: 18px;
+    margin-right: 10px;
+
+    color: getColor("accent-text");
+
+
+    @media screen and (max-width: 420px) {
+        margin-right: 80px;
+        border-bottom: 2px solid getColor("accent-text");
+    }
+
+    @media screen and (max-width: 360px) {
+        margin-right: 40px;
+    }
+
+    &:nth-child(-n+2) {
+    
+        @media screen and (max-width: 420px) {
+        margin-bottom: 20px;
+        }
+    }
+
+    &:not(:last-child) {
+        @media screen and (min-width: 420px) {
+            padding-right: 10px;
+            border-right: 1px solid rgba(33, 33, 33, 0.2);  
+        }
+    }
+}
+
+

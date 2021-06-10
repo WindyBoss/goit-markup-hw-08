@@ -1,0 +1,26 @@
+.page-header {
+    position: fixed;
+    width: 100%;
+    border-bottom: 1px solid getColor("border");
+    z-index: 1000;
+
+    &__container {
+        @extend %container;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    & .site-nav {
+        display: flex;
+        min-height: 80px;
+        width: 100%;
+        justify-content: space-between;
+        
+        @media screen and (max-width: $mobile) {
+           min-height: 60px; 
+           align-items: center;
+           justify-content: space-between;
+        }
+    }
+}
+

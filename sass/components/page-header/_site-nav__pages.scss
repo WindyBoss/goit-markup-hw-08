@@ -1,0 +1,95 @@
+@media screen and (min-width: $mobile) {
+    .menu-container {
+        position: relative;
+
+        &__pages {
+            @include centeredFlex(flex, center);
+            
+        }
+                
+        &__link {
+            font-weight: 500;
+            letter-spacing: 0.02em;
+        
+            color: getColor("second-title-text");
+        
+            @include transform(color);
+        
+            &:hover {
+                color: getColor("accent-text");
+            }
+        
+            &--active {
+                position: relative;
+                color: getColor("accent-text");
+            
+                &::after {
+                    position: absolute;
+                    bottom: -32px;
+                    left: 0;
+                  
+                    content: '';
+                    display: inline-block;
+                    width: 100%;
+                    height: 4px;
+        
+                    background-color: getColor("accent-background");
+                }
+            }
+        }
+    }
+}
+
+.menu-container__pages {
+    position: absolute;
+    left: 40px;
+    top: 48px;
+
+    @media screen and (min-width: $mobile) {
+        position: relative;
+        left: 0;
+        top: 0;
+        justify-content: space-between;
+        width: 50%;
+        max-width: 250px;
+    }
+}
+
+.menu-container__element {
+    letter-spacing: 0.02em;
+
+    @media screen and (max-width: $mobile) {
+        margin-bottom: 32px;
+        font-weight: 500;
+        font-size: 40px;  
+    }
+}
+
+.menu-container__link {
+    color: getColor("second-title-text");
+
+    @include transform(color);
+        &:hover {
+            color: getColor("accent-text");
+        }
+}
+
+@media screen and (min-width: $mobile) {   
+    .menu-container__link--active {
+        position: relative;
+        color: getColor("accent-text");
+
+        &::after {
+            position: absolute;
+            bottom: -32px;
+            left: 0;
+      
+            content: '';
+            display: inline-block;
+            width: 100%;
+            height: 4px;
+
+            background-color: getColor("accent-background");
+        }
+    }
+}

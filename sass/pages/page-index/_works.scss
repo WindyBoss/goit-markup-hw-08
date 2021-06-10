@@ -1,0 +1,38 @@
+.work-section {
+    @extend %container;
+    text-align: center;
+
+    &__list {
+        @include centeredFlex(flex, center);
+    }
+
+    &__title {
+        margin-bottom: 50px;
+        font-size: 36px;
+        color: getColor("second-title-text");
+    }
+
+
+    &__example  {
+        position: relative;
+        &:not(:last-child) {
+        margin-right: 30px;
+        }
+    }
+
+    &__text {
+        position: absolute;
+        bottom: 0;
+        padding-top: 27px;
+        padding-bottom: 27px;
+        width: 100%;
+
+        color: getColor("primary-title-text");
+        background-color: getColor("description-picture");
+    }
+
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
+}
+  

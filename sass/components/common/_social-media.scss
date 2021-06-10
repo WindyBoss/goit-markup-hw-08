@@ -1,0 +1,38 @@
+
+.team-section__social-media {
+    @include centeredFlex(flex, center);
+    margin-bottom: 30px;
+}
+
+.social-media {
+
+
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+
+
+    &__icon {
+        display: block;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+  
+        padding: 12px;
+        fill: getColor("icon");
+
+        @include transform(all);
+    
+        .social-media:hover &,
+        .social-media:focus & {
+        background-color: getColor("accent-background");
+        fill: getColor("object-bg");
+        }
+    
+        &--footer {
+            background-color: getColor("footer-social-media");
+            fill: getColor("object-bg");
+        }
+    }
+}

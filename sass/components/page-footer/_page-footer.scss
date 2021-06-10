@@ -1,0 +1,204 @@
+.page-footer {
+    width: 100%;
+    background-color: getColor("footer-background");
+    
+    &__container {
+        @extend %container;
+
+        @media screen and (min-width: $desktop) {
+            display: flex;
+            align-items:flex-start;
+            padding-top: 60px;
+        }
+    }
+
+    &__tablet {
+        @media screen and (min-width: $mobile) {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 60px;
+        }
+
+        @media screen and (min-width: $desktop) {
+            justify-content: left;
+            margin: 0;
+            text-align: left;
+        }
+    }
+
+    &__logo {
+        color: getColor("primary-title-text");
+        margin-bottom: 20px;
+
+        @media screen and (max-width: 1199px) {
+            margin-right: 0;
+        }
+    }
+
+    &__address {
+        line-height: 1.71;
+        color: getColor("primary-title-text");
+        margin-bottom: 8px;
+
+        @media screen and (min-width: $desktop) {
+            margin-bottom: 9px;
+        }
+    }
+
+    &__contact {
+
+        @media screen and (min-width: $desktop) {
+            margin-right: 70px;
+        }
+
+        &-info {
+            display: inline-flex;
+            flex-direction: column;
+            line-height: 1.71;
+
+            @media screen and (min-width: $desktop) {
+                text-align: left;
+            }
+        }
+    }
+
+    &__invitation {
+        @extend %container;
+
+        @media screen and (min-width: $mobile) {
+            width: 206px;
+            margin: 0;
+            padding: 0;
+        }
+
+        @media screen and (min-width: $desktop) {
+            margin-top: 12px;
+            margin-left: 70px;
+            margin-right: 78px;
+            text-align: left;
+        }
+    }
+
+    &__newsletter {
+        @extend %container;
+        @include centeredFlex(flex, center);
+        flex-direction: column;
+
+        margin: 0;
+        padding: 0;
+
+        @media screen and (min-width: $desktop) {
+            flex-direction: row;
+            align-items: flex-end;
+            margin-top: 12px;
+        }
+
+    }
+}
+
+.contact__element {
+    color: getColor("footer-adress-text");
+
+    @include transform(color);
+
+    margin-bottom: 8px;
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 9px;
+    }
+
+    &:hover,
+    &:focus {
+        color: getColor("accent-text");
+    }
+}
+
+/* Invitation */ 
+
+.invitation__title {
+    margin-bottom: 20px;
+  
+    font-weight: bold;
+    color: getColor("primary-title-text");
+}
+
+.invitation__list {
+    @include centeredFlex(flex, center);
+}
+
+/* newsletter */
+
+.newsletter {
+
+    @media screen and (min-width: $desktop) {
+        text-align: left; 
+        margin-right: 12px;       
+    }
+
+    &__title {
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        color: getColor("primary-title-text");
+    }
+
+    &__input {
+        width: 100%;
+        max-width: 450px;
+        padding: 15px 16px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        color: getColor("primary-title-text");
+        background-color: getColor("footer-background");
+    
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+
+        @include transform(border);
+
+        &::placeholder {
+            font-size: 16px;
+            line-height: 1.25;
+            color: getColor("footer-adress-text");
+        }
+
+        &:focus {
+            border: 3px solid getColor("accent-background");
+        }
+
+        @media screen and (min-width: $desktop) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__button {
+        @extend %button;
+        display: inline-flex;
+        align-items: center;
+        padding-left: 42px;
+
+        width: 200px;
+        height: 50px;
+
+        border: 0px;
+        font-size: 16px;
+        line-height: 1.87;
+        letter-spacing: 0.06em;    
+
+        color: getColor("primary-title-text");
+        background-color: getColor("accent-button");
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+        &::after {
+            display: block;
+            align-items: center;
+            content: "";
+            width: 24px;
+            height: 24px;
+            margin-left: 24px;
+            background-image: url('../images/icons.svg/icon-send.svg');
+        }
+    }
+}

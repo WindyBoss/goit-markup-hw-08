@@ -1,0 +1,209 @@
+.form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+
+    width: 80%;
+    height: 609px;
+    padding: 40px;
+
+    @media screen and (max-width: 340px) {
+        padding: 20px;
+    }
+
+    @media screen and (min-width: $mobile) {
+        max-width: 450px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        max-width: 528px;
+    }
+  
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    background-color: getColor("object-bg");
+  
+    transform: translate(-50%, -50%) scale(1.1);
+    @include transform(transform);
+
+    &__close-button {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+
+        border: none;
+
+        stroke: 1px solid rgba(0, 0, 0, 0.1);
+        fill: #000;
+
+        background-color: getColor("object-bg");
+
+        @include transform(fill);
+
+        &:hover,
+        &:focus {
+        fill: getColor("accent-button");
+        cursor: pointer;
+        }
+    }
+
+    &__title {
+        margin-bottom: 12px;
+        font-size: 20px;
+        line-height: 1.5;
+        color: getColor("second-title-text");  
+
+        @media screen and (min-width: $desktop) {
+            line-height: inherit;
+        }
+    }
+
+    &__field {
+        position: relative;
+        display: block;
+        text-align: left;
+        height: 58px;
+        margin-bottom: 10px;
+    }
+
+    &__input {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        width: 100%;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 42px;
+
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+
+        @include transform(border);
+
+        &:focus {
+            border: 1px solid getColor("accent-background");
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        bottom: 12px;
+        left: 10px;
+
+        width: 18px;
+        height: 18px;
+
+        fill: getColor("second-title-text");
+
+        @include transform(fill);
+
+        .form__input:focus + & {
+            fill: getColor("accent-background");
+        }
+    }
+
+    &__label {
+        position: absolute;
+        left: 10px;
+        bottom: 15px;
+
+        font-size: 12px;
+        letter-spacing: 0.01em;
+        color: getColor("primary-text");
+
+        transform: translateX(30px);
+
+        @include transform(color);
+        @include transform(transform);
+
+        .form__input:focus ~ & {
+            color: getColor("accent-text");
+            transform: translate(-12px, -30px);
+        }
+    }
+
+    &__submit {
+        @extend %button;
+        width: 100%;
+        max-width: 250px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-top: 30px;
+    
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 1.87;
+        letter-spacing: 0.06em;
+    
+        color: getColor("primary-title-text");
+        background-color: getColor("accent-button");
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        border: 1px solid getColor("accent-background");
+    
+        @include transform(transform);
+        @include transform(box-shadow);
+    
+        &:hover,
+        &:focus {
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+            0px 2px 1px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transform: translate(1px, 1px);
+        }
+    }
+}
+
+/* Comment */
+
+.comment {
+    position: relative;
+
+    display: block;
+    margin-bottom: 20px;
+    
+
+    &__label {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        font-size: 12px;
+        letter-spacing: 0.01em;
+
+        color: getColor("primary-text");
+
+        @include transform(color);
+
+    .comment__input:focus + & {
+        color: getColor("accent-text");
+    }
+
+    }
+    &__input {
+        width: 100%;
+        max-height: 120px;
+        margin-top: 18px;
+        padding: 12px 16px;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        resize: none;
+
+        @media screen and (max-width: 340px) {
+            max-height: 80px;
+        }
+
+        @include transform(border);
+
+        &:focus {
+            border: 1px solid getColor("accent-background");
+        }
+    }
+}
+
+
+

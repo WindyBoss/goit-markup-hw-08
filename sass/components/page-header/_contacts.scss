@@ -1,0 +1,132 @@
+.page-header__contact {
+
+    @media screen and (min-width: $mobile) {
+        margin-top: 21px;
+        margin-bottom: 21px;    
+    }
+
+    @media screen and (max-width: $mobile) {
+        display: flex;
+        flex-direction: column-reverse;
+        position: absolute;
+        left: 40px;     
+    }
+
+    @media screen and (max-width: 420px) {
+        bottom: calc(20%);
+    }
+    
+    @media screen and (max-width: $mobile) {
+        bottom: calc(15%);
+    }
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: $mobile) {
+    .contact__link {
+        display: flex;
+    }  
+
+    .contact__info:not(:last-child) {
+        margin-bottom: 10px; 
+    }
+}
+
+.contact__icon {
+    display: block;
+    fill: getColor("primary-text");
+
+    @include transform(fill);
+
+    .contact__info:hover & {
+        fill: getColor("accent-text");
+    }
+
+    @media screen and (min-width: $mobile) {
+        margin-right: 8px;        
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-right: 10px;
+    }
+
+    @media screen and (max-width: 479px) {
+        display: none;
+    }
+}
+
+.contact__phone {
+    font-weight: 500;
+    font-size: 34px;
+
+    color: getColor("accent-text");
+
+    @include transform(color);
+
+    @media screen and (max-width: 360px) {
+        font-size: 26px;    
+    }
+    
+    .contact__info:hover &,
+    .contact__info:focus & {
+        color: getColor("accent-text");
+    }
+
+    @media screen and (max-width: 479px) {
+        margin-bottom: 32px;
+        letter-spacing: 0.02em;
+    }
+
+    @media screen and (min-width: $mobile) {
+        font-size: 12px;
+        color: getColor("primary-text");
+        margin-top: auto;
+        margin-bottom: auto;        
+    }
+}
+
+.contact__email {
+    font-weight: 500;
+    font-size: 24px;
+
+    color: getColor("primary-text");
+
+    @include transform(color);
+
+    @media screen and (max-width: 360px) {
+        font-size: 20px;    
+    }
+
+    .contact__info:hover &,
+    .contact__info:focus & {
+        color: getColor("accent-text");
+    }
+
+    @media screen and (max-width: 479px) {
+        margin-bottom: 64px;
+        letter-spacing: 0.02em;
+    }
+    
+    @media screen and (min-width: $mobile) {
+        font-size: 12px;
+        color: getColor("primary-text");
+        margin-top: auto;
+        margin-bottom: auto;        
+    }
+}
+
+@media screen and (min-width: $desktop) {
+    .page-header__contact .contact__info {
+    @include centeredFlex (flex, center);
+    margin: 0px;
+
+    @include transform(color);
+
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+}

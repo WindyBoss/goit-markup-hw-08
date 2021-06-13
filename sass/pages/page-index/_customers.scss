@@ -15,7 +15,7 @@
     }
 
     &__logo {
-        @media screen and (max-width: 479px) {
+        @media screen and (max-width: $mobile) {
             width: calc((100% - 30px)/2);
 
             &:nth-child(2n + 1) {
@@ -27,7 +27,7 @@
             }
         }
 
-        @media screen and (min-width: $mobile) {
+        @media screen and (min-width: 481px) {
             width: calc((100% - 2*30px)/3);
             
             &:not(:nth-child(3n)) {

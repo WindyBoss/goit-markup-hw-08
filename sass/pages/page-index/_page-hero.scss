@@ -6,7 +6,7 @@
 
     text-align: center;
 
-        @media screen and (max-width: 479px) {
+        @media screen and (max-width: $mobile) {
 
             background-image:  linear-gradient(
                 to right,
@@ -28,7 +28,7 @@
                 ), url('../images/index.html/hero-picture/hero-image-mobile/hero-bg-image-mobile_960.jpg');
             }
         }
-        @media screen and (min-width: $mobile) and (max-width: 1199px) {
+        @media screen and (min-width: 481px) and (max-width: 1199px) {
 
             background-image:  linear-gradient(
                 to right,

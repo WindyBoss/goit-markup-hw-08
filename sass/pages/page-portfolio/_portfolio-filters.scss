@@ -8,7 +8,7 @@
         flex-wrap: wrap;
         margin-bottom: 50px;
 
-        @media screen and (min-width: $mobile) {
+        @media screen and (min-width: 481px) {
             @include centeredFlex(flex, center);
 
         }
@@ -19,7 +19,7 @@
 
             margin-bottom: 15px;
 
-            @media screen and (min-width: $mobile) {
+            @media screen and (min-width: 481px) {
                 width: calc((100% - 4*8px)/5);
                 max-width: 150px;
                 margin-bottom: 0;

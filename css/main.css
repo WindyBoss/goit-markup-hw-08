@@ -2198,11 +2198,15 @@ img {
   .project-section__element:nth-child(2n + 1) {
     margin-right: 30px;
   }
+  .project-section__element:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .project-section__element {
     width: calc((100% - 4*15px) / 3);
+    max-width: 370px;
   }
   .project-section__element:not(:nth-child(3n)) {
     margin-right: 30px;
